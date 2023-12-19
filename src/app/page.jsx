@@ -3,8 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
@@ -22,7 +20,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
-import { LottieAnimation } from "@/components/lottieAnimation";
+import { LottieAnimation } from "@/components/LottieAnimation";
 
 // function MailIcon(props) {
 //   return (
