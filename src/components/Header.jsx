@@ -9,7 +9,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/avatar.png'
+import goldberglogo from '@/images/logos/goldberglogo.jpeg'
 
 function CloseIcon(props) {
   return (
@@ -124,11 +124,8 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/articles">Articles</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/speaking">Speaking</MobileNavItem>
-                <MobileNavItem href="/uses">Uses</MobileNavItem>
+                {/* <MobileNavItem href="/about">About</MobileNavItem> */}
+                <MobileNavItem href="/kontakt">Kontakt</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -165,11 +162,8 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/speaking">Speaking</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        {/* <NavItem href="/about">About</NavItem> */}
+        <NavItem href="/kontakt">Kontakt</NavItem>
       </ul>
     </nav>
   )
@@ -205,10 +199,11 @@ function clamp(number, a, b) {
 
 function AvatarContainer({ className, ...props }) {
   return (
+    // 'h-14 w-32 rounded-full bg-white p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
     <div
       className={clsx(
         className,
-        'h-14 w-32 rounded-full bg-white p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+        '',
       )}
       {...props}
     />
@@ -224,12 +219,13 @@ function Avatar({ large = false, className, ...props }) {
       {...props}
     >
       <Image
-        src={avatarImage}
+        src={goldberglogo}
         alt=""
         // sizes={large ? '4rem' : '2.25rem'}
+        // 'bg-white object-fit pt-1 dark:bg-zinc-800',
         className={clsx(
-          'bg-white object-fit pt-1 dark:bg-zinc-800',
-          large ? 'h-20 w-48 rounded-md' : 'h-9 w-9',
+          'object-fit',
+          large ? 'h-48 w-48 rounded-2xl' : 'h-9 w-9',
         )}
         priority
         quality={100}
@@ -366,8 +362,9 @@ export function Header() {
                 position: 'var(--header-position)',
               }}
             >
+              {/* className="top-[var(--avatar-top,theme(spacing.3))] w-full" */}
               <div
-                className="top-[var(--avatar-top,theme(spacing.3))] w-full"
+              className="top-[var(--avatar-top,theme(spacing.0))] w-full"
                 style={{
                   position: 'var(--header-inner-position)',
                 }}
