@@ -364,7 +364,7 @@ export function Header() {
             >
               {/* className="top-[var(--avatar-top,theme(spacing.3))] w-full" */}
               <div
-              className="top-[var(--avatar-top,theme(spacing.3))] w-full"
+              className="top-[var(--avatar-top,theme(spacing.0))] w-full"
                 style={{
                   position: 'var(--header-inner-position)',
                 }}
@@ -404,7 +404,11 @@ export function Header() {
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
-                    <Avatar />
+                  <Avatar
+                    large
+                    className="block h-20 w-48 origin-left"
+                    // style={{ transform: 'var(--avatar-image-transform)' }}
+                  />
                   </AvatarContainer>
                 )}
               </div>
