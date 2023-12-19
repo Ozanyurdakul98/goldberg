@@ -8,6 +8,7 @@ export const metadata = {
 
 export default function Kontakt() {
   return (
+    <div className='mt-36'>
     <SimpleLayout
       title="Wir freuen uns auf Ihre Kontaktaufnahme."
       intro="Erstklassiges Catering. Bester Catering-Service für Events und Veranstaltungen mit herausragender Gastronomie. Jetzt nur ein Telefonat entfernt."
@@ -52,6 +53,6 @@ export default function Kontakt() {
                 </div>
             </div>
         </div>
-    </SimpleLayout>
+    </SimpleLayout></div>
   )
 }
