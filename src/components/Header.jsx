@@ -124,10 +124,9 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                {/* <MobileNavItem href="/about">About</MobileNavItem> */}
                 <MobileNavItem href="/">Startseite</MobileNavItem>
                 <MobileNavItem href="/kontakt">Kontakt</MobileNavItem>
-              </ul>
+               </ul>
             </nav>
           </Popover.Panel>
         </Transition.Child>
@@ -163,10 +162,9 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        {/* <NavItem href="/about">About</NavItem> */}
         <NavItem href="/">Startseite</NavItem>
         <NavItem href="/kontakt">Kontakt</NavItem>
-      </ul>
+       </ul>
     </nav>
   )
 }
@@ -199,13 +197,11 @@ function clamp(number, a, b) {
   return Math.min(Math.max(number, min), max)
 }
 
-function AvatarContainer({ className, ...props }) {
+function AvatarContainer({ className,large, ...props }) {
   return (
-    // 'h-14 w-32 rounded-full bg-white p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
     <div
       className={clsx(
-        className,
-        '',
+        className, large?" " : 'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
       )}
       {...props}
     />
@@ -223,14 +219,12 @@ function Avatar({ large = false, className, ...props }) {
       <Image
         src={goldberglogo}
         alt=""
-        // sizes={large ? '4rem' : '2.25rem'}
-        // 'bg-white object-fit pt-1 dark:bg-zinc-800',
+        // sizes={large ? '40rem' : '2.25rem'}
         className={clsx(
-          'object-fit',
-          large ? 'h-48 w-48 rounded-2xl' : 'h-20 w-20 rounded-2xl',
+          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
+          large ? 'h-48 w-48' : 'h-9 w-9',
         )}
         priority
-        quality={100}
       />
     </Link>
   )
@@ -364,16 +358,16 @@ export function Header() {
                 position: 'var(--header-position)',
               }}
             >
-              {/* className="top-[var(--avatar-top,theme(spacing.3))] w-full" */}
               <div
-              className="top-[var(--avatar-top,theme(spacing.0))] w-full"
+                className="top-[var(--avatar-top,theme(spacing.3))] w-full"
                 style={{
                   position: 'var(--header-inner-position)',
                 }}
               >
                 <div className="relative">
                   <AvatarContainer
-                    className="absolute -left-2 top-3 origin-left transition-opacity"
+                    large
+                    className="absolute left-0 top-3 origin-left transition-opacity"
                     style={{
                       opacity: 'var(--avatar-border-opacity, 0)',
                       transform: 'var(--avatar-border-transform)',
@@ -381,7 +375,7 @@ export function Header() {
                   />
                   <Avatar
                     large
-                    className="block h-20 w-48 origin-left"
+                    className="block h-16 w-48 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
                 </div>
@@ -406,11 +400,7 @@ export function Header() {
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
-                  <Avatar
-                    className="block h-20 rounded-2xl w-20 origin-left"
-                    // className="block h-20 w-48 origin-left"
-                    // style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
+                    <Avatar />
                   </AvatarContainer>
                 )}
               </div>
