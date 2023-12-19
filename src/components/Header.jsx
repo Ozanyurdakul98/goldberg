@@ -364,7 +364,7 @@ export function Header() {
             >
               {/* className="top-[var(--avatar-top,theme(spacing.3))] w-full" */}
               <div
-              className="top-[var(--avatar-top,theme(spacing.0))] w-full"
+              className="top-[var(--avatar-top,theme(spacing.3))] w-full"
                 style={{
                   position: 'var(--header-inner-position)',
                 }}
