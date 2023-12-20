@@ -5,7 +5,7 @@ export const ContainerOuter = forwardRef(function OuterContainer(
   { className, children, ...props },
   ref,
 ) {
-  return (
+   return (
     <div ref={ref} className={clsx('sm:px-8', className)} {...props}>
       <div className="mx-auto w-full max-w-7xl lg:px-8">{children}</div>
     </div>
@@ -13,27 +13,28 @@ export const ContainerOuter = forwardRef(function OuterContainer(
 })
 
 export const ContainerInner = forwardRef(function InnerContainer(
-  { className, children, ...props },
+  { className, children,marquee, ...props },
   ref,
 ) {
+  console.log("mae",marquee)
   return (
     <div
       ref={ref}
-      className={clsx('relative px-4 sm:px-8 lg:px-12', className)}
+      className={clsx('relative px-4 sm:px-8 lg:px-12', className, marquee ? "!px-0":"")}
       {...props}
     >
-      <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>
+      <div className={clsx("mx-auto max-w-2xl lg:max-w-5xl", marquee ? "!max-w-none":"")}>{children}</div>
     </div>
   )
 })
 
 export const Container = forwardRef(function Container(
-  { children, ...props },
+  { children, marquee, ...props },
   ref,
 ) {
   return (
     <ContainerOuter ref={ref} {...props}>
-      <ContainerInner>{children}</ContainerInner>
+      <ContainerInner marquee={marquee? true : false}>{children}</ContainerInner>
     </ContainerOuter>
   )
 })

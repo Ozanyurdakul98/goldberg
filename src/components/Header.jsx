@@ -10,6 +10,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import goldberglogo from '@/images/logos/goldberglogo.jpeg'
+import { FacebookIcon, InstagramIcon } from './SocialIcons'
 
 function CloseIcon(props) {
   return (
@@ -126,6 +127,8 @@ function MobileNavigation(props) {
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/">Startseite</MobileNavItem>
                 <MobileNavItem href="/kontakt">Kontakt</MobileNavItem>
+                <MobileNavItem href="https://www.instagram.com/goldbergpersonal/" target="_blank"><InstagramIcon className="relative z-0 h-4 w-4"/></MobileNavItem>
+                <MobileNavItem href="https://www.facebook.com/goldberg.deutschland/" target="_blank"><FacebookIcon className="relative z-0 h-4 w-4"/></MobileNavItem>
                </ul>
             </nav>
           </Popover.Panel>
@@ -135,7 +138,7 @@ function MobileNavigation(props) {
   )
 }
 
-function NavItem({ href, children }) {
+function NavItem({ href, children, target }) {
   let isActive = usePathname() === href
 
   return (
@@ -143,15 +146,18 @@ function NavItem({ href, children }) {
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
+          'relative z-20 block px-3 py-2 transition',
           isActive
-            ? 'text-teal-500 dark:text-teal-400'
-            : 'hover:text-teal-500 dark:hover:text-teal-400',
+            ? 'text-[#b3a797] dark:text-[#b3a797]'
+            : 'hover:text-[#b3a797] dark:hover:text-[#b3a797]',
+            // ? 'text-teal-500 dark:text-teal-400'
+            // : 'hover:text-teal-500 dark:hover:text-teal-400',
         )}
+        target={target}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+          <span className="absolute z-10 inset-x-1 -bottom-px h-px bg-gradient-to-r from-[#b3a797]/0 via-[#b3a797]/40 to-[#b3a797]/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
         )}
       </Link>
     </li>
@@ -161,9 +167,11 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex items-center rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/">Startseite</NavItem>
         <NavItem href="/kontakt">Kontakt</NavItem>
+        <NavItem href="https://www.instagram.com/goldbergpersonal/" target="_blank"><InstagramIcon className="relative z-0 h-4 w-4"/></NavItem>
+        <NavItem href="https://www.facebook.com/goldberg.deutschland/" target="_blank"><FacebookIcon className="relative z-0 h-4 w-4"/></NavItem>
        </ul>
     </nav>
   )
@@ -185,8 +193,8 @@ function ThemeToggle() {
       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
+      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-[#b3a797] [@media(prefers-color-scheme:dark)]:stroke-[#b3a797] [@media(prefers-color-scheme:dark)]:group-hover:fill-[#b3a797] [@media(prefers-color-scheme:dark)]:group-hover:stroke-[#b3a797]" />
+      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-[#b3a797]/10 [@media_not_(prefers-color-scheme:dark)]:stroke-[#b3a797]" />
     </button>
   )
 }
