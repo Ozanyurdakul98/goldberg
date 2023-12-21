@@ -83,20 +83,20 @@ import { LottieAnimation } from "@/components/LottieAnimation";
 //   )
 // }
 
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Mehr lesen</Card.Cta>
-    </Card>
-  )
-}
+// function Article({ article }) {
+//   return (
+//     <Card as="article">
+//       <Card.Title href={`/articles/${article.slug}`}>
+//         {article.title}
+//       </Card.Title>
+//       <Card.Eyebrow as="time" dateTime={article.date} decorate>
+//         {formatDate(article.date)}
+//       </Card.Eyebrow>
+//       <Card.Description>{article.description}</Card.Description>
+//       <Card.Cta>Mehr lesen</Card.Cta>
+//     </Card>
+//   )
+// }
 
 const food = [
   {
@@ -194,7 +194,7 @@ function Photos() {
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
+  // let articles = (await getAllArticles()).slice(0, 4)
 
   
 
@@ -210,7 +210,7 @@ export default async function Home() {
           Erstklassiges Premium-Catering. Bester Catering-Service aus Frankfurt am Main für Events und Veranstaltungen mit herausragender Gastronomie. Mit Fokus auf Qualität, frischen, regionalen und saisonalen Zutaten bieten wir die gesamte Bandbreite an Catering-Services an.
           </p>
         </div>
-        <div className="relative">
+        {/* <div className="relative">
         <Image
           src={i2}
             alt=""
@@ -218,20 +218,19 @@ export default async function Home() {
           sizes="(max-width: 640px) 18rem, 50rem"
           className="rounded-xl h-full aspect-video object-top w-full object-cover"
           />
-        </div>
+        </div> */}
       </Container>
       <Photos />
       {/* marquee */}
-      <Container marquee={true} className="mt-20">
-      
+      <Container marquee={true} className="mt-20 relative">
         <div className="relative flex overflow-hidden text-[#b3a797] dark:text-zinc-400">
   <div className="py-12 animate-marquee whitespace-nowrap">
     <span className="text-4xl mx-4">Premium Catering</span>
     <span className="text-4xl mx-4">Feinkost</span>
     <span className="text-4xl mx-4">Aus dem Taunus</span>
     <span className="text-4xl mx-4">Events</span>
-    <span className="text-4xl mx-4">Messecatering</span>
-    <span className="text-4xl mx-4">Standcatering</span>
+    <span className="text-4xl mx-4">Messe Catering</span>
+    <span className="text-4xl mx-4">Stand Catering</span>
 
   </div>
   <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
@@ -239,21 +238,21 @@ export default async function Home() {
     <span className="text-4xl mx-4">Feinkost</span>
     <span className="text-4xl mx-4">Aus dem Taunus</span>
     <span className="text-4xl mx-4">Events</span>
-    <span className="text-4xl mx-4">Messecatering</span>
-    <span className="text-4xl mx-4">Standcatering</span>
+    <span className="text-4xl mx-4">Messe Catering</span>
+    <span className="text-4xl mx-4">Stand Catering</span>
   </div>
   <div className="py-12 absolute top-12 animate-marquee whitespace-nowrap">
-  <span className="text-4xl mx-4">Messe-Caterer</span>
+  <span className="text-4xl mx-4">Messe Caterer</span>
     <span className="text-4xl mx-4">Gastronomie</span>
     <span className="text-4xl mx-4">Einzigartige Events</span>
     <span className="text-4xl mx-4">Hochzeiten</span>
     <span className="text-4xl mx-4">Party Service</span>
-              <span className="text-4xl mx-4">Weine</span>
-              <span className="text-4xl mx-4">Genuss</span>
+    <span className="text-4xl mx-4">Weine</span>
+    <span className="text-4xl mx-4">Genuss</span>
 
   </div>
   <div className="absolute top-12 py-12 animate-marquee2 whitespace-nowrap">
-  <span className="text-4xl mx-4">Messe-Caterer</span>
+  <span className="text-4xl mx-4">Messe Caterer</span>
     <span className="text-4xl mx-4">Gastronomie</span>
     <span className="text-4xl mx-4">Einzigartige Events</span>
     <span className="text-4xl mx-4">Hochzeiten</span>
@@ -262,7 +261,9 @@ export default async function Home() {
     <span className="text-4xl mx-4">Genuss</span>
   </div>
         </div>
-         
+        <div className="absolute right-5 top-5 z-50 w-56">
+        <LottieAnimation/>
+        </div>
         </Container>
       <Container className="mt-16">
         {/* banner */}
@@ -320,32 +321,6 @@ export default async function Home() {
         {/* cards */}
         <div className="mx-auto max-w-xl lg:max-w-none">
           <Example/>
-        </div>
-        {/* grid col2 */}
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-           {/* Unser Catering */}
-            <section className='bg-[#b3a797]/30 dark:bg-slate-700/40 rounded-md shadow-xl text-gray-700 dark:text-white px-5 py-10'>
-              <h3 className='text-2xl text-[#b3a797] font-bold mb-2'>Das Catering</h3>
-              <p className='leading-relaxed'>
-              Das Catering wird in unterschiedlichsten Bereichen eingesetzt und zeigt sich als besonders facettenreiches Einsatzgebiet. Umso höher sind die Anforderungen an das Personal. Professionalität, Teamfähigkeit und ein geschulter Umgang mit den Gästen sind Voraussetzung, um einen reibungslosen Ablauf gewährleisten zu können. Doch keine Sorge: Wir finden dank unserer Erfahrung auch in diesem anspruchsvollen Bereich für Sie immer die perfekte Unterstützung Ihres Teams.
-              Durch unsere Vielseitigkeit innerhalb der Berufsfelder sind wir in verschiedensten Gastronomiebereichen präsent und unterstützen Catering aller Art. Dabei engagieren wir uns insbesondere auch im Airline- und Eventcatering. Egal ob Koch, Servicekraft oder Logistiker, von Kleinstveranstaltung bis zum Großevent.
-              </p>
-            </section>
-            {/* articles */}
-            {/* {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))} */}
-          </div>
-          {/* right side */}
-          <div className="space-y-10 max-lg:-order-1 px-20">
-          {/* <div className="space-y-10 lg:pl-16 xl:pl-24"> */}
-            {/* <Newsletter />
-            */}
-            <LottieAnimation/>
-             {/* 
-           */}
-          </div>
         </div>
       </Container>
     </>
