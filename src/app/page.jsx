@@ -23,6 +23,7 @@ import i8 from '@/images/goldberg/i8.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { LottieAnimation } from "@/components/LottieAnimation";
+import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
 // function MailIcon(props) {
 //   return (
@@ -193,6 +194,14 @@ function Photos() {
   )
 }
 
+function SocialLink({ icon: Icon, ...props }) {
+  return (
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    </Link>
+  )
+}
+
 export default async function Home() {
   // let articles = (await getAllArticles()).slice(0, 4)
 
@@ -209,7 +218,20 @@ export default async function Home() {
           <p className="mt-6 text-base font-medium lg:text-[17px] text-zinc-500 dark:text-zinc-400">
           Erstklassiges Premium-Catering. Bester Catering-Service aus Frankfurt am Main für Events und Veranstaltungen mit herausragender Gastronomie. Mit Fokus auf Qualität, frischen, regionalen und saisonalen Zutaten bieten wir die gesamte Bandbreite an Catering-Services an.
           </p>
+          <div className="mt-6 flex gap-6">  
+            <SocialLink
+              href="https://www.instagram.com/goldbergpersonal/"
+              aria-label="Follow on Instagram"
+              icon={InstagramIcon}
+            />
+            <SocialLink
+              href="https://www.facebook.com/goldberg.deutschland/"
+              aria-label="Follow on LinkedIn"
+              icon={FacebookIcon}
+            />
+          </div>
         </div>
+
         {/* <div className="relative">
         <Image
           src={i2}
