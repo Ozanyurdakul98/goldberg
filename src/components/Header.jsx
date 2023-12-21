@@ -343,36 +343,29 @@ export function Header() {
         style={{
           height: 'var(--header-height)',
           marginBottom: 'var(--header-mb)',
-        }}
-      >
+        }}>
         <div
           ref={headerRef}
-          className="relative flex z-10 h-16 pt-6"
-        >
+          className="relative flex z-10 h-16 pt-6">
           {/* avatar */}
-              <div className="w-full absolute left-0 top-5">
+          <div className="w-full absolute max-lg:-left-20 top-5">
                   <AvatarContainer
                     large
                     className=" top-3 origin-left transition-opacity"
                     style={{
                       opacity: 'var(--avatar-border-opacity, 0)',
                       transform: 'var(--avatar-border-transform)',
-                    }}
-                  />
+                    }}/>
                   <Avatar
                     large
                     className="block h-16 w-28 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-              </div>
-           
-
+                    style={{ transform: 'var(--avatar-image-transform)' }}/>
+          </div>
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
             style={{
               position: 'var(--header-inner-position)',
-            }}
-          >
+            }}>
             <div className="relative flex gap-4">
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
