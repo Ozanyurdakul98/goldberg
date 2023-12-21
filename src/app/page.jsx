@@ -136,7 +136,7 @@ const food = [
 function Example() {
   return (
     <div className="bg-white py-16 dark:bg-transparent">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 lg:px-8 xl:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 lg:px-8">
         {/* heading */}
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unsere hausinternen Leistungen</h2>
@@ -147,11 +147,11 @@ function Example() {
         {/* cards */}
         <ul
           role="list"
-          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8"
         >
           {food.map((person) => (
             <li className="relative" key={person.name}>
-              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
+              <Image priority className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
               <div className="max-w-xs absolute bottom-10 bg-white/95 w-full px-2 rounded-r-md">
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
               <p className="text-base leading-7 text-gray-600">{person.role}</p>
@@ -182,6 +182,7 @@ function Photos() {
             <Image
               src={image}
               alt=""
+              priority
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -212,7 +213,8 @@ export default async function Home() {
         <div className="relative">
         <Image
           src={i2}
-          alt=""
+            alt=""
+            priority
           sizes="(max-width: 640px) 18rem, 50rem"
           className="rounded-xl h-full aspect-video object-top w-full object-cover"
           />
@@ -307,7 +309,7 @@ export default async function Home() {
              
             <div className="mt-10 flex">
               <a href="#" className="text-base font-semibold leading-7 text-[#b3a797]">
-                Learn more about our company <span aria-hidden="true">&rarr;</span>
+                Jetzt Kontakt herstellen <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
