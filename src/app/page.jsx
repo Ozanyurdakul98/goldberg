@@ -150,11 +150,11 @@ function Example() {
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8"
         >
           {food.map((person) => (
-            <li className="relative" key={person.name}>
+            <li className="shadow-xl rounded-2xl relative" key={person.name}>
               <Image priority className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
-              <div className="max-w-xs absolute bottom-10 bg-white/95 w-full px-2 rounded-r-md">
-              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
-              <p className="text-base leading-7 text-gray-600">{person.role}</p>
+              <div className="max-w-xs absolute bottom-10 bg-white border  w-full px-2 rounded-r-xl">
+              <h3 className="mt-5 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
+              <p className="text-base mb-1 font-extralight leading-7 text-gray-600">{person.role}</p>
               </div>
             </li>
           ))}
