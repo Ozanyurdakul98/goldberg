@@ -3,12 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -20,8 +15,6 @@ import i5 from '@/images/goldberg/i5.jpg'
 import i6 from '@/images/goldberg/i6.jpg'
 import i7 from '@/images/goldberg/i7.jpg'
 import i8 from '@/images/goldberg/i8.jpg'
-import { getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
 import { LottieAnimation } from "@/components/LottieAnimation";
 import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
@@ -202,10 +195,13 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
+export const metadata = {
+  title: 'Goldberg Catering Events - Gemeinsam für ein unvergessliches Event',
+  description: 'Erstklassiges Premium-Catering. Bester Catering-Service aus Frankfurt am Main für Events und Veranstaltungen mit herausragender Gastronomie. Mit Fokus auf Qualität, frischen, regionalen und saisonalen Zutaten bieten wir die gesamte Bandbreite an Catering-Services an.',
+}
+
 export default async function Home() {
   // let articles = (await getAllArticles()).slice(0, 4)
-
-  
 
   return (
     <>

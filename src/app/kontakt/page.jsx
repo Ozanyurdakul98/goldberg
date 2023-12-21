@@ -2,8 +2,8 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 
 
 export const metadata = {
-  title: 'Kontakt',
-  description: 'Kontaktiere uns - Kontaktdaten',
+  title: 'Goldberg Catering Events - Kontakt',
+  description: 'Unsere Kontaktdaten für den direkten Kontakt.',
 }
 
 export default function Kontakt() {
@@ -47,7 +47,7 @@ export default function Kontakt() {
                         </span>
                         <p className="text-2xl font-extrabold text-dark-grey-900">Standort</p>
                         <p className="text-base leading-7 text-dark-grey-600">Finde unser Büro</p>
-                        <a className="text-lg text-center font-bold text-purple-blue-500" target="_blank" href="https://goo.gl/maps/QcWzYETAh4FS3KTD7"> Taubengrund 35, 65451 Kelsterbach</a>
+                        <a className="text-lg text-center font-bold text-purple-blue-500" target="_blank" href="https://maps.app.goo.gl/qor1pv23mWxJ6QpQ6"> Taubengrund 35, 65451 Kelsterbach</a>
                         </div>
                     </div>
                 </div>
