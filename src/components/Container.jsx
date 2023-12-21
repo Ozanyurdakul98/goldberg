@@ -16,7 +16,7 @@ export const ContainerInner = forwardRef(function InnerContainer(
   { className, children,marquee, ...props },
   ref,
 ) {
-  console.log("mae",marquee)
+
   return (
     <div
       ref={ref}
