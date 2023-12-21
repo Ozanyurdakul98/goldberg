@@ -135,12 +135,12 @@ const food = [
 
 function Example() {
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-16 dark:bg-transparent">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 lg:px-8 xl:grid-cols-3">
         {/* heading */}
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unsere hausinternen Leistungen</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-zinc-500 dark:text-zinc-400">
             Wir sind Ihr Ansprechpartner für Veranstaltungen bei Ihnen zu Hause oder zu einem geschäftlichen Anlass bei uns im Stammhaus. Selbstverständlich liefern wir Ihnen auch Ihre Wunschgerichte direkt zu Ihnen nach Hause für ein Abendessen mit der Familie oder mit Freunden.
           </p>
         </div>
@@ -265,7 +265,7 @@ export default async function Home() {
       <Container className="mt-16">
         {/* banner */}
         <div className="mx-auto max-w-xl lg:max-w-none">
-    <div className="bg-white py-16">
+    <div className="bg-white dark:bg-transparent py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       {/* left */}
@@ -280,9 +280,9 @@ export default async function Home() {
           </div>
           {/* right */}
           <div>
-            <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
+            <div className="text-base leading-7 text-gray-700 dark:text-zinc-400 lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-[#b3a797]">Company values</p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-400 sm:text-4xl">
                 On a mission to empower remote teams
               </h1>
               <div className="max-w-xl">
