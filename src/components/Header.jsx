@@ -9,7 +9,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import goldberglogo from '@/images/logos/goldberglogo.jpeg'
+import goldberglogo from '@/images/logos/goldberglogo.png'
 import { FacebookIcon, InstagramIcon } from './SocialIcons'
 
 function CloseIcon(props) {
@@ -221,6 +221,9 @@ function Avatar({ large = false, className, ...props }) {
     >
       <Image
         src={goldberglogo}
+        width={500}
+        height={500}
+        quality={100}
         alt=""
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',

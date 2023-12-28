@@ -45,9 +45,10 @@ export default function Kontakt() {
                         </svg>
 
                         </span>
-                        <p className="text-2xl font-extrabold text-dark-grey-900">Standort</p>
+                        <p className="text-2xl font-extrabold text-dark-grey-900">Zentrale</p>
                         <p className="text-base leading-7 text-dark-grey-600">Finde unser Büro</p>
-                        <a className="text-lg text-center font-bold text-purple-blue-500" target="_blank" href="https://maps.app.goo.gl/qor1pv23mWxJ6QpQ6"> Taubengrund 35, 65451 Kelsterbach</a>
+                        <a className="text-lg text-center font-bold text-purple-blue-500" target="_blank" href="https://maps.app.goo.gl/qor1pv23mWxJ6QpQ6"> Beethovenplatz 1, 61674 Kronberg im Taunus
+</a>
                         </div>
                     </div>
                 </div>

@@ -209,10 +209,11 @@ export default async function Home() {
       <Container className="mt-40">
         <div className="max-w-2xl mb-7">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Goldberg Catering GmbH
+            Goldberg Catering Events
           </h1>
           <p className="mt-6 text-base font-medium lg:text-[17px] text-zinc-500 dark:text-zinc-400">
-          Erstklassiges Premium-Catering. Bester Catering-Service aus Frankfurt am Main für Events und Veranstaltungen mit herausragender Gastronomie. Mit Fokus auf Qualität, frischen, regionalen und saisonalen Zutaten bieten wir die gesamte Bandbreite an Catering-Services an.
+
+ Wir setzen auf unvergleichliche Qualität, indem wir jedes Gericht und jede Feinkost in unseren eigenen Küchen von Hand zubereiten. Von der Auswahl der frischesten Zutaten bis zur kunstvollen Präsentation garantieren wir, dass jedes kulinarische Erlebnis bei uns ein Meisterwerk der Handwerkskunst ist. Vertrauen Sie auf unsere Liebe zum Detail, die in jedem Bissen spürbar ist – Willkommen bei Goldberg Catering Events.
           </p>
           <div className="mt-6 flex gap-6">  
             <SocialLink
@@ -302,32 +303,31 @@ export default async function Home() {
           {/* right */}
           <div>
             <div className="text-base leading-7 text-gray-700 dark:text-zinc-400 lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-[#b3a797]">Company values</p>
+              <p className="text-base font-semibold leading-7 text-[#b3a797]">Unsere Werte</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-400 sm:text-4xl">
-                On a mission to empower remote teams
+              Leidenschaft für Catering, Perfektion für Events
               </h1>
               <div className="max-w-xl">
                 <p className="mt-6">
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
+                
+
+Willkommen bei Goldberg Catering Events, wo aus meiner Überzeugung, dass mit Hingabe und harter Arbeit alles möglich ist, eine wegweisende Erfolgsgeschichte entstanden ist.
+
                 </p>
                 <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                Unser Ursprung in Kelsterbach führte uns zu einer führenden Position in den Bereichen Airline Catering, Airport Handling, Personalvermittlung und exklusivem Eventcatering. Unser Credo lautet dabei stets: »Setzen Sie Standards, folgen Sie ihnen nicht.«
+
+Höhepunkte unserer Reise umfassen die Partnerschaft mit der renommierten Kronberg Academy Stiftung und die Ehre, die VIP-Bereiche im Stadion von Eintracht Frankfurt zu betreuen. Dies repräsentiert die einzigartige Verbindung von Geschichte und Exzellenz.
+
                 </p>
                 <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                Unser Erfolg gründet sich auf einem herausragenden Team, das gemeinsam mit mir nicht nur eine Vision, sondern die feste Überzeugung teilt, dass Großes erreicht werden kann. Willkommen bei [Ihrem Unternehmen], wo Leidenschaft und Professionalität in jedem Catering-Erlebnis verschmelzen.
                 </p>
               </div>
             </div>
              
             <div className="mt-10 flex">
-              <a href="#" className="text-base font-semibold leading-7 text-[#b3a797]">
+              <a href="/kontakt" className="text-base font-semibold leading-7 text-[#b3a797]">
                 Jetzt Kontakt herstellen <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
