@@ -25,7 +25,7 @@ export default function Kontakt() {
                         </span>
                         <p className="text-2xl font-extrabold text-dark-grey-900">E-Mail</p>
                         <p className="text-base leading-7 text-dark-grey-600">Kontaktiere uns</p>
-                        <a className="text-lg font-bold text-purple-blue-500" href = "mailto: info@goldberg-personal.de">info@goldberg-personal.de</a>
+                        <a className="text-lg font-bold text-purple-blue-500" href = "mailto: info@goldberg-catering.de">info@goldberg-catering.de</a>
                         </div>
                         <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white dark:bg-zinc-800 rounded-3xl shadow-main">
                         <span>
@@ -35,7 +35,7 @@ export default function Kontakt() {
                         </span>
                         <p className="text-2xl font-extrabold text-dark-grey-900">Telefon</p>
                         <p className="text-base leading-7 text-dark-grey-600">Erreiche uns unter</p>
-                        <a className="text-lg font-bold text-purple-blue-500" href="tel:+4961074058610">+49 (06107) 4058610</a>
+                        <a className="text-lg font-bold text-purple-blue-500" href="tel:+49 (0)6107 40 58 610">+49 (0)6107 40 58 610</a>
                         </div>
                         <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white dark:bg-zinc-800 rounded-3xl shadow-main">
                         <span>
