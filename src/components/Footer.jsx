@@ -92,8 +92,9 @@ export function Footer() {
               <span>61674 Kronberg im Taunus</span>
         </p>
         <p className="mt-4 flex gap-2 justify-center flex-row text-center text-xs leading-5 text-zinc-400 dark:text-zinc-500">
-              <span>+49 (0)6107.40 58 610</span>
-              <span>info@goldberg-catering.de</span>
+              <a href="tel:+49 (0)6107 40 58 610">+49 (0)6107 40 58 610</a>
+              <a href = "mailto: info@goldberg-catering.de">info@goldberg-catering.de</a>
+
          </p>
             
             <p className="mt-10 text-center text-xs leading-5 text-zinc-400 dark:text-zinc-500">

@@ -146,9 +146,9 @@ function Example() {
           {food.map((person) => (
             <li className="shadow-xl rounded-2xl relative" key={person.name}>
               <Image priority className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
-              <div className="max-w-xs absolute bottom-10 bg-white border  w-full px-2 rounded-r-xl">
-              <h3 className="mt-5 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
-              <p className="text-base mb-1 font-extralight leading-7 text-gray-600">{person.role}</p>
+              <div className="max-w-xs max-lg:max-w-[14rem] absolute max-lg:bottom-0 max-lg:bg-white/90 max-sm:max-w-xs max-sm:bg-white max-sm:rounded-bl-xl bottom-10 bg-white border  w-full px-2 rounded-r-xl">
+              <h3 className="mt-5 text-lg max-lg:text-base font-semibold leading-8 text-gray-900">{person.name}</h3>
+              <p className="text-base max-lg:text-sm mb-1 font-extralight leading-7 text-gray-600">{person.role}</p>
               </div>
             </li>
           ))}
