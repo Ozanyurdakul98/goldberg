@@ -133,7 +133,7 @@ function Example() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 lg:px-8">
         {/* heading */}
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unsere hausinternen Leistungen</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-400 sm:text-4xl">Unsere hausinternen Leistungen</h2>
           <p className="mt-6 text-lg leading-8 text-zinc-500 dark:text-zinc-400">
             Wir sind Ihr Ansprechpartner für Veranstaltungen bei Ihnen zu Hause oder zu einem geschäftlichen Anlass bei uns im Stammhaus. Selbstverständlich liefern wir Ihnen auch Ihre Wunschgerichte direkt zu Ihnen nach Hause für ein Abendessen mit der Familie oder mit Freunden.
           </p>
