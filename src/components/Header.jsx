@@ -216,7 +216,7 @@ function Avatar({ large = false, className, ...props }) {
     <Link
       href="/"
       aria-label="Home"
-      className={clsx(className, large ? 'h-24 w-24' : 'h-9 w-9', 'relative pointer-events-auto rounded-full bg-zinc-50 dark:bg-zinc-800')}
+      className={clsx(className, large ? 'max-sm:h-20 max-sm:w-20 h-24 w-24' : 'h-9 w-9', 'relative pointer-events-auto rounded-full bg-zinc-50 dark:bg-zinc-800')}
       {...props}
     >
       <Image
@@ -226,7 +226,7 @@ function Avatar({ large = false, className, ...props }) {
         quality={100}
         alt=""
         className={clsx(
-          'absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2',large ? 'h-20 w-20' : 'h-9 w-9'
+          'absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2',large ? 'max-sm:h-16 max-sm:w-16 h-20 w-20' : 'h-9 w-9'
          
         )}
         priority
@@ -351,7 +351,7 @@ export function Header() {
           ref={headerRef}
           className="relative flex z-10 h-16 pt-6">
           {/* avatar */}
-          <div className="w-full absolute max-lg:-left-20 top-5">
+          <div className="w-full absolute max-lg:-left-20 -left-3 top-5">
                   <AvatarContainer
                     large
                     className=" top-3 origin-left transition-opacity"
