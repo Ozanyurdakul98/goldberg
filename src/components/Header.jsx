@@ -148,8 +148,8 @@ function NavItem({ href, children, target }) {
         className={clsx(
           'relative z-20 block px-3 py-2 transition',
           isActive
-            ? 'text-[#b3a797] dark:text-[#b3a797]'
-            : 'hover:text-[#b3a797] dark:hover:text-[#b3a797]',
+            ? 'text-[#C3A433] dark:text-[#C3A433]'
+            : 'hover:text-[#C3A433] dark:hover:text-[#C3A433]',
             // ? 'text-teal-500 dark:text-teal-400'
             // : 'hover:text-teal-500 dark:hover:text-teal-400',
         )}
@@ -157,7 +157,7 @@ function NavItem({ href, children, target }) {
       >
         {children}
         {isActive && (
-          <span className="absolute z-10 inset-x-1 -bottom-px h-px bg-gradient-to-r from-[#b3a797]/0 via-[#b3a797]/40 to-[#b3a797]/0 dark:from-[#b3a797]/0 dark:via-[#b3a797]/40 dark:to-[#b3a797]/0" />
+          <span className="absolute z-10 inset-x-1 -bottom-px h-px bg-gradient-to-r from-[#C3A433]/0 via-[#C3A433]/40 to-[#C3A433]/0 dark:from-[#C3A433]/0 dark:via-[#C3A433]/40 dark:to-[#C3A433]/0" />
         )}
       </Link>
     </li>
@@ -193,8 +193,8 @@ function ThemeToggle() {
       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-[#b3a797] [@media(prefers-color-scheme:dark)]:stroke-[#b3a797] [@media(prefers-color-scheme:dark)]:group-hover:fill-[#b3a797] [@media(prefers-color-scheme:dark)]:group-hover:stroke-[#b3a797]" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-[#b3a797]/10 [@media_not_(prefers-color-scheme:dark)]:stroke-[#b3a797]" />
+      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-[#C3A433] [@media(prefers-color-scheme:dark)]:stroke-[#C3A433] [@media(prefers-color-scheme:dark)]:group-hover:fill-[#C3A433] [@media(prefers-color-scheme:dark)]:group-hover:stroke-[#C3A433]" />
+      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-[#C3A433]/10 [@media_not_(prefers-color-scheme:dark)]:stroke-[#C3A433]" />
     </button>
   )
 }
@@ -216,18 +216,18 @@ function Avatar({ large = false, className, ...props }) {
     <Link
       href="/"
       aria-label="Home"
-      className={clsx(className, 'pointer-events-auto')}
+      className={clsx(className, large ? 'h-24 w-24' : 'h-9 w-9', 'relative pointer-events-auto rounded-full bg-zinc-50 dark:bg-zinc-800')}
       {...props}
     >
       <Image
         src={goldberglogo}
-        width={500}
-        height={500}
+        width={1000}
+        height={1000}
         quality={100}
         alt=""
         className={clsx(
-          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-          large ? 'h-16 w-16' : 'h-9 w-9',
+          'absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-1/2',large ? 'h-20 w-20' : 'h-9 w-9'
+         
         )}
         priority
       />

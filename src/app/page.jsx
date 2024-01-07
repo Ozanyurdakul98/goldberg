@@ -242,7 +242,7 @@ export default async function Home() {
       <Photos />
       {/* marquee */}
       <Container marquee={true} className="mt-20 relative">
-        <div className="relative flex overflow-hidden text-[#b3a797] dark:text-zinc-400">
+        <div className="relative flex overflow-hidden text-[#C3A433] dark:text-zinc-400">
   <div className="py-12 animate-marquee whitespace-nowrap">
     <span className="text-4xl mx-4">Premium Catering</span>
     <span className="text-4xl mx-4">Feinkost</span>
@@ -303,7 +303,7 @@ export default async function Home() {
           {/* right */}
           <div>
             <div className="text-base leading-7 text-gray-700 dark:text-zinc-400 lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-[#b3a797]">Unsere Werte</p>
+              <p className="text-base font-semibold leading-7 text-[#C3A433]">Unsere Werte</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-400 sm:text-4xl">
               Leidenschaft für Catering, Perfektion für Events
               </h1>
@@ -327,7 +327,7 @@ Höhepunkte unserer Reise umfassen die Partnerschaft mit der renommierten Kronbe
             </div>
              
             <div className="mt-10 flex">
-              <a href="/kontakt" className="text-base font-semibold leading-7 text-[#b3a797]">
+              <a href="/kontakt" className="text-base font-semibold leading-7 text-[#C3A433]">
                 Jetzt Kontakt herstellen <span aria-hidden="true">&rarr;</span>
               </a>
             </div>

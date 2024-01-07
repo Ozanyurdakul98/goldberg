@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import goldberglogo from '@/images/logos/goldberglogo.png'
 
-import { ContainerInner, ContainerOuter } from '@/components/Container'
+import {  ContainerOuter } from '@/components/Container'
+import Image from 'next/image'
+import clsx from 'clsx'
 
 const navigation = {
   main: [
@@ -53,7 +56,19 @@ export function Footer() {
     <footer className="">
       <ContainerOuter>
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
-            <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+          <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+            <div className="w-full flex justify-center">
+              
+          <Image
+        src={goldberglogo}
+        width={1000}
+        height={1000}
+        quality={100}
+        alt=""
+        className={clsx('h-48 w-48')}
+        priority
+        />
+        </div>
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
