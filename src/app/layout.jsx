@@ -19,7 +19,7 @@ import '@/styles/tailwind.css'
 // }
 
 export const metadata = {
-  title: 'Goldberg Catering Events - Kontakt',
+  title: 'Goldberg Catering & Events - Kontakt',
   description: 'Unsere Kontaktdaten für den direkten Kontakt.',
 }
 

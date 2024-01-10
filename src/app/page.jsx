@@ -196,7 +196,7 @@ function SocialLink({ icon: Icon, ...props }) {
 }
 
 export const metadata = {
-  title: 'Goldberg Catering Events - Gemeinsam für ein unvergessliches Event',
+  title: 'Goldberg Catering & Events - Gemeinsam für ein unvergessliches Event',
   description: 'Erstklassiges Premium-Catering. Bester Catering-Service aus Frankfurt am Main für Events und Veranstaltungen mit herausragender Gastronomie. Mit Fokus auf Qualität, frischen, regionalen und saisonalen Zutaten bieten wir die gesamte Bandbreite an Catering-Services an.',
 }
 
@@ -209,11 +209,11 @@ export default async function Home() {
       <Container className="mt-40">
         <div className="max-w-2xl mb-7">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Goldberg Catering Events
+            Goldberg Catering & Events
           </h1>
           <p className="mt-6 text-base font-medium lg:text-[17px] text-zinc-500 dark:text-zinc-400">
 
- Wir setzen auf unvergleichliche Qualität, indem wir jedes Gericht und jede Feinkost in unseren eigenen Küchen von Hand zubereiten. Von der Auswahl der frischesten Zutaten bis zur kunstvollen Präsentation garantieren wir, dass jedes kulinarische Erlebnis bei uns ein Meisterwerk der Handwerkskunst ist. Vertrauen Sie auf unsere Liebe zum Detail, die in jedem Bissen spürbar ist – Willkommen bei Goldberg Catering Events.
+ Wir setzen auf unvergleichliche Qualität, indem wir jedes Gericht und jede Feinkost in unseren eigenen Küchen von Hand zubereiten. Von der Auswahl der frischesten Zutaten bis zur kunstvollen Präsentation garantieren wir, dass jedes kulinarische Erlebnis bei uns ein Meisterwerk der Handwerkskunst ist. Vertrauen Sie auf unsere Liebe zum Detail, die in jedem Bissen spürbar ist – Willkommen bei Goldberg Catering & Events.
           </p>
           <div className="mt-6 flex gap-6">  
             <SocialLink
@@ -311,7 +311,7 @@ export default async function Home() {
                 <p className="mt-6">
                 
 
-Willkommen bei Goldberg Catering Events, wo aus meiner Überzeugung, dass mit Hingabe und harter Arbeit alles möglich ist, eine wegweisende Erfolgsgeschichte entstanden ist.
+Willkommen bei Goldberg Catering & Events, wo aus meiner Überzeugung, dass mit Hingabe und harter Arbeit alles möglich ist, eine wegweisende Erfolgsgeschichte entstanden ist.
 
                 </p>
                 <p className="mt-8">

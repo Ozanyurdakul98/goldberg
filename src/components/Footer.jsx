@@ -87,18 +87,18 @@ export function Footer() {
           ))}
         </div>
         <p className="mt-10 flex flex-col text-center text-xs leading-5 text-zinc-400 dark:text-zinc-500">
-              <span>Goldberg Catering Events in der Kronberg Academy</span>
+              <span>Goldberg Catering & Events in der Kronberg Academy</span>
               <span>Beethovenplatz 1</span>
               <span>61674 Kronberg im Taunus</span>
         </p>
         <p className="mt-4 flex gap-2 justify-center flex-row text-center text-xs leading-5 text-zinc-400 dark:text-zinc-500">
-              <a href="tel:+49 (0)6107 40 58 610">+49 (0)6107 40 58 610</a>
+              <a href="tel:+49 (0) 6107 40 58 610">+49 (0) 6107 40 58 610</a>
               <a href = "mailto: info@goldberg-catering.de">info@goldberg-catering.de</a>
 
          </p>
             
             <p className="mt-10 text-center text-xs leading-5 text-zinc-400 dark:text-zinc-500">
-        &copy; {new Date().getFullYear()} Goldberg Catering Events. Alle Rechte vorbehalten.
+        &copy; {new Date().getFullYear()} Goldberg Catering & Events. Alle Rechte vorbehalten.
         </p>
       </div>
          </div>
