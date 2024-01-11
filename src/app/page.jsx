@@ -177,7 +177,7 @@ function Photos() {
               src={image}
               alt=""
               priority
-              sizes="(min-width: 640px) 18rem, 11rem"
+              quality={100}
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
