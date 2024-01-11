@@ -177,6 +177,8 @@ function Photos() {
               src={image}
               alt=""
               priority
+              width={500}
+              height={500}
               quality={100}
               className="absolute inset-0 h-full w-full object-cover"
             />
