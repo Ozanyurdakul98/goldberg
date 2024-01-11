@@ -93,7 +93,7 @@ export function Footer() {
         </p>
         <p className="mt-4 flex gap-2 justify-center flex-row text-center text-xs leading-5 text-zinc-400 dark:text-zinc-500">
               <a href="tel:+49 (0) 6107 40 58 610">+49 (0) 6107 40 58 610</a>
-              <a href = "mailto: info@goldberg-catering.de">info@goldberg-catering.de</a>
+              <a href = "mailto: bestellungen@goldberg-catering.de">bestellungen@goldberg-catering.de</a>
 
          </p>
             
