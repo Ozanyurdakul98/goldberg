@@ -15,6 +15,7 @@ import i5 from '@/images/goldberg/i5.jpg'
 import i6 from '@/images/goldberg/i6.jpg'
 import i7 from '@/images/goldberg/i7.jpg'
 import i8 from '@/images/goldberg/i8.jpg'
+import i9 from '@/images/goldberg/i9.jpg'
 import { LottieAnimation } from "@/components/LottieAnimation";
 import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
@@ -146,13 +147,83 @@ function Example() {
           {food.map((person) => (
             <li className="shadow-xl rounded-2xl relative" key={person.name}>
               <Image priority className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
-              <div className="max-w-xs max-lg:max-w-[14rem] absolute max-lg:bottom-0 max-lg:bg-white/90 max-sm:max-w-xs max-sm:bg-white max-lg:rounded-bl-xl bottom-10 bg-white border  w-full px-2 rounded-r-xl">
+              <div className="max-w-xs max-lg:max-w-[14rem] absolute max-lg:bottom-0 max-lg:bg-white/90 max-sm:max-w-xs max-sm:bg-white max-lg:rounded-bl-xl bottom-10 bg-white border w-full px-2 rounded-r-xl">
               <h3 className="mt-5 text-lg max-lg:text-base font-semibold leading-8 text-gray-900">{person.name}</h3>
-              <p className="text-base max-lg:text-sm mb-1 font-extralight leading-7 text-gray-600">{person.role}</p>
+              <p className="text-base max-lg:text-base mb-1 font-extralight leading-7 text-gray-600">{person.role}</p>
               </div>
             </li>
           ))}
         </ul>
+      </div>
+    </div>
+  )
+}
+
+
+const features = [
+  {
+    name: 'Hauscatering.',
+    description:
+      ' Als offizieller Hauscaterer freuen wir uns, die Gäste und Kunden der Kronberg Academy bei ihren Events mit unserer gastronomischen Exzellenz zu verwöhnen.',
+   },
+  {
+    name: 'Passion für Perfektion.',
+    description: ' Bei Goldberg Catering & Events bieten wir mehr als nur Speisen und Getränke – wir schaffen kulinarische Erlebnisse, die die Sinne begeistern.',
+   },
+  {
+    name: 'Expertise.',
+    description: ' Bis zu 600 Gäste in der historischen Atmosphäre von Kronberg verwöhnen wir mit exquisiten Speisen und Getränken.',
+   },
+]
+
+export function Kronberg() {
+  return (
+    <div className="overflow-hidden text-zinc-500 dark:text-zinc-400 bg-white dark:bg-transparent py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="lg:pr-8 lg:pt-4">
+            <div className="lg:max-w-lg">
+              <h2 className="text-base font-semibold leading-7 text-[#C3A433]">Unser top Kunde</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Die Kronberg Academy</p>
+              <p className="mt-6 text-lg leading-8">
+              Tauchen Sie ein in die Welt der erstklassigen Catering-Services von Goldberg Catering & Events, exklusiver Partner der renommierten Kronberg Academy.
+              </p>
+              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 lg:max-w-none">
+                {features.map((feature) => (
+                  <div key={feature.name} className="relative pl-9">
+                    <dt className="inline font-semibold">
+                      <div className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                      {feature.name}
+                    </dt> 
+                    <dd className="inline">{feature.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+          <div className="relative h-[700px] overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+            {/* <Image
+            className="object-center object-fill rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
+            src={i9}
+            alt="" /> */}
+              <Image
+            src={i9}
+            alt=""
+              priority
+              width={800}
+              height={800}
+              quality={100}
+              className="absolute object-center inset-0 h-full w-full object-cover"
+            />
+                </div>
+          {/* <img
+            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            alt="Product screenshot"
+            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            width={2432}
+            height={1442}
+          /> */}
+        </div>
       </div>
     </div>
   )
@@ -338,6 +409,7 @@ Höhepunkte unserer Reise umfassen die Partnerschaft mit der renommierten Kronbe
       </div>
     </div>
         </div>
+        <Kronberg/>
         {/* cards */}
         <div className="mx-auto max-w-xl lg:max-w-none">
           <Example/>
