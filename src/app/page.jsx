@@ -157,7 +157,7 @@ function Example() {
                             key={person.name}
                         >
                             <Image
-                                priority
+                                quality={70}
                                 className="aspect-[3/2] w-full rounded-2xl object-cover"
                                 src={person.imageUrl}
                                 alt=""
@@ -244,7 +244,7 @@ export function Kronberg() {
                         <Image
                             src={i9}
                             alt=""
-                            priority
+                            quality={70}
                             width={800}
                             height={800}
                             className="absolute object-center inset-0 h-full w-full object-cover"
@@ -286,10 +286,9 @@ function Photos() {
                         <Image
                             src={image}
                             alt=""
-                            priority
+                            quality={70}
                             width={500}
                             height={500}
-                            quality={100}
                             className="absolute inset-0 h-full w-full object-cover"
                         />
                     </div>
@@ -415,6 +414,7 @@ export default async function Home() {
                                 <div className="lg:pr-4">
                                     <div className="relative h-[700px] overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                                         <Image
+                                            quality={70}
                                             className="absolute  inset-0 h-full w-full object-cover"
                                             src={i8}
                                             alt=""

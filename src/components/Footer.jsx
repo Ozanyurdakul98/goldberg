@@ -62,10 +62,9 @@ export function Footer() {
                                 src={goldberglogo}
                                 width={1000}
                                 height={1000}
-                                quality={100}
                                 alt=""
                                 className={clsx('h-48 w-48')}
-                                priority
+                                quality={70}
                             />
                         </div>
                         <nav

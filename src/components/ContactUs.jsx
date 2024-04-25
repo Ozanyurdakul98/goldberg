@@ -174,10 +174,9 @@ export default function ContactUs() {
                                 src={goldberglogo}
                                 width={1000}
                                 height={1000}
-                                quality={100}
+                                quality={70}
                                 alt=""
                                 className={clsx('h-32 w-32')}
-                                priority
                             />
                         </div>
                         <figure className="mt-10 bg-white dark:bg-transparent rounded-3xl">
@@ -192,6 +191,7 @@ export default function ContactUs() {
                                 <Image
                                     src={face}
                                     alt=""
+                                    quality={70}
                                     layout="cover"
                                     className="h-12 w-12 flex-none rounded-full bg-gray-50"
                                 />
