@@ -18,6 +18,7 @@ import i8 from '@/images/goldberg/i8.jpg'
 import i9 from '@/images/goldberg/i9.jpg'
 import { LottieAnimation } from '@/components/LottieAnimation'
 import { FacebookIcon, InstagramIcon } from '@/components/SocialIcons'
+import ContactUs from '@/components/ContactUs'
 
 // function MailIcon(props) {
 //   return (
@@ -205,7 +206,7 @@ export function Kronberg() {
                             <h2 className="text-base font-semibold leading-7 text-[#C3A433]">
                                 Unser top Kunde
                             </h2>
-                            <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+                            <p className="mt-2 text-3xl font-bold text-black tracking-tight dark:text-gray-400 sm:text-4xl">
                                 Die Kronberg Academy
                             </p>
                             <p className="mt-6 text-lg leading-8">
@@ -220,7 +221,7 @@ export function Kronberg() {
                                         key={feature.name}
                                         className="relative pl-9"
                                     >
-                                        <dt className="inline font-semibold">
+                                        <dt className="inline font-semibold text-black dark:text-gray-400">
                                             <div
                                                 className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
                                                 aria-hidden="true"
@@ -496,6 +497,7 @@ export default async function Home() {
                 <div className="mx-auto max-w-xl lg:max-w-none">
                     <Example />
                 </div>
+                <ContactUs />
             </Container>
         </>
     )
